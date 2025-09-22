@@ -1,6 +1,6 @@
 ﻿using OutLook_Events;
 
-namespace Teams_Backend_API.Models.Entities
+namespace meeting_backend.Models.Entities
 {
     public class MeetingViewModel
     {

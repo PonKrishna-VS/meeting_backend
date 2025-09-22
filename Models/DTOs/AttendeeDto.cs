@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Teams_Backend_API.Models.DTOs
+namespace meeting_backend.Models.DTOs
 {
     public class AttendeeDto
     {

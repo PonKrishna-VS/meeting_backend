@@ -1,4 +1,4 @@
-﻿namespace Teams_Backend_API.Models
+﻿namespace meeting_backend.Models
 {
     public class Booking
     {

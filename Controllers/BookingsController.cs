@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Graph;
 using Azure.Identity;
-using Teams_Backend_API.Models.DTOs;
+using meeting_backend.Models.DTOs;
 using Microsoft.Graph.Models;
 using Microsoft.Graph.Models.ODataErrors;
 using Microsoft.Identity.Client;
@@ -13,7 +13,7 @@ using System.Linq;
 using GraphDayOfWeek = Microsoft.Graph.Models.DayOfWeekObject;
 using KiotaDate = Microsoft.Kiota.Abstractions.Date;
 
-namespace Teams_Backend_API.Controllers;
+namespace meeting_backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -298,6 +298,7 @@ public class BookingsController : ControllerBase
                 .Events
                 .PostAsync(@event);
 
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             return Ok(new
             {
                 id = createdEvent.Id,
@@ -311,6 +312,7 @@ public class BookingsController : ControllerBase
                 reminderMinutesBeforeStart = createdEvent.ReminderMinutesBeforeStart,
                 recurrence = createdEvent.Recurrence // echo back for debugging
             });
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
         catch (ODataError ex)
         {

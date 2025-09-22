@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 using Newtonsoft.Json.Linq;
 using System.Collections.Concurrent;
-using Teams_Backend_API.Models.Entities;
+using meeting_backend.Models.Entities;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using Teams_Backend_API.Models.DTOs;
+using meeting_backend.Models.DTOs;
 
 namespace OutLook_Events
 {
